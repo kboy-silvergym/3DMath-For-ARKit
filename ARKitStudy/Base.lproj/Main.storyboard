@@ -1,27 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jS9-IN-kkx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1A-3p-lu0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </arscnView>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-UQ-czc">
+                                <rect key="frame" x="14" y="700" width="347" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="5YN-D1-P8D"/>
+                                </connections>
+                            </slider>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-AG-KRC">
+                                <rect key="frame" x="16" y="619.33333333333337" width="76" height="64.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dYK-UQ-czc" firstAttribute="leading" secondItem="OAW-gs-Bsw" secondAttribute="leading" constant="16" id="BfT-jO-3Lt"/>
+                            <constraint firstAttribute="bottom" secondItem="M1A-3p-lu0" secondAttribute="bottom" id="Geo-WE-J9F"/>
+                            <constraint firstItem="M1A-3p-lu0" firstAttribute="top" secondItem="jS9-IN-kkx" secondAttribute="top" id="IvA-bP-VYt"/>
+                            <constraint firstItem="Pho-AG-KRC" firstAttribute="leading" secondItem="OAW-gs-Bsw" secondAttribute="leading" constant="16" id="JfL-Td-C81"/>
+                            <constraint firstItem="M1A-3p-lu0" firstAttribute="trailing" secondItem="OAW-gs-Bsw" secondAttribute="trailing" id="NR2-N1-lJY"/>
+                            <constraint firstItem="OAW-gs-Bsw" firstAttribute="bottom" secondItem="dYK-UQ-czc" secondAttribute="bottom" constant="48" id="NRa-gG-CLG"/>
+                            <constraint firstItem="M1A-3p-lu0" firstAttribute="leading" secondItem="OAW-gs-Bsw" secondAttribute="leading" id="Rf0-nM-xCZ"/>
+                            <constraint firstItem="dYK-UQ-czc" firstAttribute="top" secondItem="Pho-AG-KRC" secondAttribute="bottom" constant="16" id="oTI-5Y-pSs"/>
+                            <constraint firstItem="OAW-gs-Bsw" firstAttribute="trailing" secondItem="dYK-UQ-czc" secondAttribute="trailing" constant="16" id="xSS-sW-vHH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OAW-gs-Bsw"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="sceneView" destination="M1A-3p-lu0" id="yZF-PL-XWe"/>
+                        <outlet property="slider" destination="dYK-UQ-czc" id="xfk-7C-6JY"/>
+                        <outlet property="zNearLabel" destination="Pho-AG-KRC" id="Ocg-UN-WD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>
