@@ -6,6 +6,7 @@ iOSDC2018で発表した「ARKitのための3D算数」のサンプルコード�
 https://fortee.jp/iosdc-japan-2018/proposal/f59795b0-ef1e-4e98-9199-8401e7a0acf9
 
 ## Qiita
-
+https://qiita.com/k-boy/items/775633fe3fd6da9c5fb6
 
 ## スライド
+https://speakerdeck.com/fujikawakei/arkitfalsetamefalse3dsuan-shu
