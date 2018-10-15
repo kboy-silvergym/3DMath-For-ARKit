@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,6 +33,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="42r-2X-hkb">
+                                <rect key="frame" x="16" y="575.33333333333337" width="343" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="64u-Vi-4Qw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -43,7 +56,10 @@
                             <constraint firstItem="M1A-3p-lu0" firstAttribute="trailing" secondItem="OAW-gs-Bsw" secondAttribute="trailing" id="NR2-N1-lJY"/>
                             <constraint firstItem="OAW-gs-Bsw" firstAttribute="bottom" secondItem="dYK-UQ-czc" secondAttribute="bottom" constant="48" id="NRa-gG-CLG"/>
                             <constraint firstItem="M1A-3p-lu0" firstAttribute="leading" secondItem="OAW-gs-Bsw" secondAttribute="leading" id="Rf0-nM-xCZ"/>
+                            <constraint firstItem="Pho-AG-KRC" firstAttribute="top" secondItem="42r-2X-hkb" secondAttribute="bottom" constant="16" id="WHo-rK-2T5"/>
+                            <constraint firstItem="42r-2X-hkb" firstAttribute="leading" secondItem="OAW-gs-Bsw" secondAttribute="leading" constant="16" id="n94-1U-uAM"/>
                             <constraint firstItem="dYK-UQ-czc" firstAttribute="top" secondItem="Pho-AG-KRC" secondAttribute="bottom" constant="16" id="oTI-5Y-pSs"/>
+                            <constraint firstItem="OAW-gs-Bsw" firstAttribute="trailing" secondItem="42r-2X-hkb" secondAttribute="trailing" constant="16" id="xAd-Jv-2tu"/>
                             <constraint firstItem="OAW-gs-Bsw" firstAttribute="trailing" secondItem="dYK-UQ-czc" secondAttribute="trailing" constant="16" id="xSS-sW-vHH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OAW-gs-Bsw"/>
